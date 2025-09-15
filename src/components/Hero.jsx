@@ -1,5 +1,5 @@
 import React from "react";
-import sampleVideo from "../assets/hero-gif.gif"; 
+import sampleVideo from "../assets/hero-vid.mp4"; 
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom"; 
 
@@ -28,11 +28,11 @@ export default function Hero() {
 
         <div className="hero-right" aria-hidden>
 
-          {/* <video width="600" height="400" autoPlay loop muted>
+          <video width="600" height="400" autoPlay loop muted>
         <source src={sampleVideo} type="video/mp4" />
         
-      </video> */}
-          <img src={sampleVideo} alt="Doctor showing prescription on tablet"/>
+      </video>
+          {/* <img src={sampleVideo} alt="Doctor showing prescription on tablet"/> */}
          
         </div>
       </div>
