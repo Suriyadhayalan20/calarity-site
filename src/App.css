@@ -64,13 +64,13 @@ button:focus-visible {
   --brand-2: #10B981;        /* green accent */
   --card: #FFFFFF;
   --soft: #F3F7FC;           /* soft blue surfaces */
-  --radius: 12px;
-  --container: 1100px;
+  --radius: 15px;
+  --container: 1200px;
 }
 
 /* ---------- layout helpers ---------- */
 .container {
-  width: 92%;
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
 }
@@ -81,57 +81,108 @@ button:focus-visible {
 }
 
 /* ---------- navbar ---------- */
+/* Base Navbar */
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 3rem;
-  background: #fff;
-  border-bottom: 1px solid #fff;
-  position: sticky;
-  top: 0;
+  padding: 20px 0;
+  /* background: white; */
+  position: relative;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
   z-index: 1000;
 }
 
 .navbar-logo {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: bold;
+  cursor: pointer;
   color: #1b6afa;
-  letter-spacing: 0.5px;
-  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Links (desktop) */
+.navbar-links {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.login-button {
+  background: #1b6afa;
+  color: white;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.login-button:hover {
+  background: #1b6afa;
+}
+
+/* Hamburger (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
   cursor: pointer;
 }
 
-.navbar-links{
-  display: flex !important;
-  gap: 2.5rem !important;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* ---------- Mobile Styles ---------- */
+@media (max-width: 768px) {
+  /* .navbar{
+    display: flex;
+    justify-content: space-around;
+  } */
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none; /* hide by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* just below navbar */
+    right: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    gap: 0px;
+  }
+
+  .navbar-links a{
+    font-size: 25px;
+  }
+
+  .navbar-links.open {
+    display: flex; /* show when open */
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+  }
+
+  .login-button {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
 }
 
-.navbar-links li a{
-  font-size: 20px;
-  font-weight: 500;
-  color: #333;
-  transition: color 0.3s ease;
-}
-.navbar-links li a:hover {
-  color: #111;  
-}
-
-.btn-dark {
-  background: #1b6afa;
-  color: #fff !important;
-  padding: 8px 15px;
-  border-radius: 6px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-.btn-dark:hover {
-  background: #1459d9;
-}
 
 /* ---------- buttons ---------- */
 .btn {
@@ -148,7 +199,16 @@ button:focus-visible {
 .large { padding:12px 22px; font-size:1rem; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 56px 0 40px; background: var(--bg); }
+.hero { padding: 56px 0 40px;
+   background: var(--bg); 
+  }
+
+  .hero-video{
+    width: 100%;
+  }
+
+
+
 .grid-2 { display:grid; grid-template-columns: 1fr 520px; gap:48px; align-items:center; }
 .hero-left { padding-right: 12px; }
 .hero-title {
@@ -164,8 +224,16 @@ button:focus-visible {
 .hero-right img { 
   display:flex; 
   justify-content:center; 
-  width: 100%; 
+  width: 85%; 
   border-radius: 15px !important;
+}
+
+@media (max-width:768px){
+  .hero-video{
+    width: 100%;
+  }
+
+
 }
 
 /* ---------- Struggle cards ---------- */
@@ -190,6 +258,11 @@ button:focus-visible {
 .card:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(16,24,40,0.06); }
 .card-icon { width:56px; height:56px; display:flex; align-items:center; justify-content:center; border-radius:10px; margin-bottom:12px; }
 
+@media (max-width: 768px){
+  .struggle{
+    padding: 0;
+  }
+}
 /* ---------- Transformation ---------- */
 .transformation { padding:56px 0; background: var(--page); }
 .before-after { margin-top:20px; display:grid; grid-template-columns: 1fr 1fr; gap:18px; align-items:start; }
@@ -214,7 +287,7 @@ button:focus-visible {
 .cta p.muted { margin:6px 0 0 0; }
 
 /* ---------- Footer ---------- */
-.footer { padding:36px 0; background:#071023; color:#CBD5E1; margin-top:20px; }
+.footer { padding:36px 0; background:#071023; color:#CBD5E1;}
 .footer-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:18px; }
 .footer .copyright { text-align:center; color:#94A3B8; margin-top:16px; }
 

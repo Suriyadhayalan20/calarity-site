@@ -28,7 +28,7 @@ export default function Hero() {
 
         <div className="hero-right" aria-hidden>
 
-          <video width="600" height="400" autoPlay loop muted>
+          <video className="hero-video" autoPlay loop muted>
         <source src={sampleVideo} type="video/mp4" />
         
       </video>
