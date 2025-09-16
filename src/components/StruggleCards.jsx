@@ -1,4 +1,9 @@
 import React from "react";
+import Lottie from "lottie-react";
+import manualIcon from "../assets/manual-scheduling-icon.json";
+import hasslesIcon from "../assets/endless-icon.json";
+import missedIcon from "../assets/missed-appointment-icon.json";
+
 
 const items = [
   { title: "Manual scheduling", desc: "Entering shifts one by one", icon: "calendar" },
@@ -9,15 +14,15 @@ const items = [
 function Icon({ name }) {
   if (name === "calendar") {
     return (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="none" fill="#EAF2FF"/></svg>
+      <Lottie className="manual-icon" animationData={manualIcon} loop={true} />
     );
   }
   if (name === "alert") {
     return (
-      <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#EAF8F0"/></svg>
+      <Lottie animationData={hasslesIcon} loop={true} />
     );
   }
-  return <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" fill="#FFF4E6"/></svg>;
+  return <Lottie animationData={missedIcon} loop={true} />;
 }
 
 export default function StruggleCards() {

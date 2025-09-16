@@ -1,7 +1,9 @@
 import React from "react";
-import sampleVideo from "../assets/hero-vid.mp4"; 
+// import sampleVideo from "../assets/hero-vid.mp4"; 
+import HeroAnimation from "../assets/hero.json"; 
 // import { Link } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom"; 
+import Lottie from "lottie-react";
 
 export default function Hero() {
 
@@ -28,10 +30,12 @@ export default function Hero() {
 
         <div className="hero-right" aria-hidden>
 
-          <video className="hero-video" autoPlay loop muted>
+          <Lottie animationData={HeroAnimation} loop={true} />
+
+          {/* <video className="hero-video" autoPlay loop muted>
         <source src={sampleVideo} type="video/mp4" />
         
-      </video>
+      </video> */}
           {/* <img src={sampleVideo} alt="Doctor showing prescription on tablet"/> */}
          
         </div>
