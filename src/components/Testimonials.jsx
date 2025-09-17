@@ -3,25 +3,25 @@ import { useState } from "react";
 
 const data = [
   {
-    img: "/src/assets/testimonial-women.png",
+    img: "public/testimonial-women.png",
     name: "Jane D.",
     role: "Product Designer",
     text: "As a busy professional, I don't have a lot of time to manage my investments, but pagedone has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily."
   },
   {
-    img: "/src/assets/testimonial-men.png",
+    img: "public/testimonial-men.png",
     name: "Harsh P.",
     role: "Product Designer",
     text: "As a busy professional, I don't have a lot of time to manage my investments, but pagedone has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily."
   },
   {
-    img: "/src/assets/testimonial-women.png",
+    img: "public/testimonial-women.png",
     name: "Mark S.",
    role: "Product Designer",
     text: "As a busy professional, I don't have a lot of time to manage my investments, but pagedone has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily."
    },
   {
-    img: "/src/assets/testimonial-men.png",
+    img: "public/testimonial-men.png",
      name: "Lisa P.",
     role: "Product Designer",
     text: "As a busy professional, I don't have a lot of time to manage my investments, but pagedone has made it possible for me to stay on top of my portfolio and make informed decisions quickly and easily."
