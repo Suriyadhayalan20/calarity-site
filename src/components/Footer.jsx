@@ -1,35 +1,39 @@
-import React from "react";
+// import "./Footer.css";
 
-
-export default function Footer(){
+export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer-grid">
-        <div>
-          <div className="brand">
-            <div className="brand-mark small" aria-hidden/>
-            <div className="brand-text">Calarity</div>
-          </div>
-          <p className="muted">Automated scheduling for busy teams.</p>
+      <div className="footer-inner">
+        {/* Brand / Intro */}
+        <div className="footer-col brand">
+          <h2 className="logo">Calarity</h2>
+          <p>Automated scheduling for busy teams.</p>
         </div>
 
-        <div>
-          <h4>Links</h4>
-          <ul className="link-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#usecases">Use cases</a></li>
-            <li><a href="#contact">Contact</a></li>
+        {/* Links */}
+        <div className="footer-col">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/use-cases">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4>Contact</h4>
-          <p className="muted">info@calerity.example</p>
+        {/* Contact */}
+        <div className="footer-col">
+          <h3>Contact</h3>
+          <p><a href="mailto:info@calarity.example">info@calarity.example</a></p>
+          <div className="socials">
+            <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i className="fab fa-github"></i></a>
+          </div>
         </div>
       </div>
 
       <div className="copyright">
-        © {new Date().getFullYear()} Calerity. All rights reserved.
+        © {new Date().getFullYear()} Calarity. All rights reserved.
       </div>
     </footer>
   );
