@@ -7,7 +7,7 @@ export default function Transformation() {
   const toggle = () => setFlipped((s) => !s);
 
   return (
-    <div className="transformation-stage">
+    <div id="how" className="transformation-stage">
       <h2 className="section-title">The Tranformation</h2>
         <p className="sub-content">Let automation take over the hard work, so you can focus on what maters.</p>
       <div

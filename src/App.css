@@ -140,48 +140,108 @@ button:focus-visible {
   cursor: pointer;
 }
 
+.login-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.doctor-btn,
+.patient-btn {
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid #1b6afa;
+  transition: all 0.3s ease;
+}
+
+/* Doctor button = filled */
+.doctor-btn {
+  background: #1b6afa;
+  color: #fff;
+  border: none;
+}
+.doctor-btn:hover {
+  background: #1657c9;
+}
+
+/* Patient button = outline */
+.patient-btn {
+  background: transparent;
+  color: #1b6afa;
+}
+.patient-btn:hover {
+  background: #e6f0ff;
+}
+
+
 /* ---------- Mobile Styles ---------- */
+  @media (max-width: 768px) {
+    /* .navbar{
+      display: flex;
+      justify-content: space-around;
+    } */
+    .hamburger {
+      display: block;
+    }
+
+    .login-buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .navbar-links {
+      display: none; /* hide by default */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* just below navbar */
+      right: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 200px;
+      gap: 0px;
+    }
+
+    .navbar-links a{
+      font-size: 25px;
+    }
+
+    .navbar-links.open {
+      display: flex; /* show when open */
+    }
+
+    .navbar-links li {
+      margin: 0.5rem 0;
+    }
+
+    .login-button {
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+  }
+
+
+  /* hide the extra buttons by default */
+.mobile-login { display: none !important; }
+.desktop-login { display: flex; gap: 8px;  }
+
+/* only on small screens */
 @media (max-width: 768px) {
-  /* .navbar{
-    display: flex;
-    justify-content: space-around;
-  } */
-  .hamburger {
-    display: block;
-  }
-
-  .navbar-links {
-    display: none; /* hide by default */
+  .desktop-login { display: none !important; }       /* hide desktop buttons */
+  .mobile-login {
+    display: flex !important;                        /* show inside dropdown */
     flex-direction: column;
-    position: absolute;
-    top: 70px; /* just below navbar */
-    right: 1rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 200px;
-    gap: 0px;
+    gap: 8px;
+    margin-top: 0.5rem;
   }
-
-  .navbar-links a{
-    font-size: 25px;
-  }
-
-  .navbar-links.open {
-    display: flex; /* show when open */
-  }
-
-  .navbar-links li {
-    margin: 0.5rem 0;
-  }
-
-  .login-button {
+  .mobile-login button {
     width: 100%;
-    text-align: center;
-    display: none;
   }
 }
+
 
 
 /* ---------- buttons ---------- */
@@ -194,7 +254,7 @@ button:focus-visible {
   border: none;
   cursor: pointer;
 }
-.btn-ghost { background: transparent; border: 1px solid #E6EDF7; color: var(--brand); }
+.btn-ghost { background: transparent; color: var(--brand); }
 .btn-primary { background: var(--brand); color: white; box-shadow: 0 8px 20px rgba(37,99,235,0.12); }
 .large { padding:12px 22px; font-size:1rem; }
 
