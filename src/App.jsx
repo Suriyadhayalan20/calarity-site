@@ -10,7 +10,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Login from "./pages/DoctorLogin";
+import DoctorLogin from "./pages/DoctorLogin";
+import PatientLogin from "./pages/PatientLogin";
+import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
+// import LoginTemplate from "./pages/LoginTemplate";
 
 export default function App() {
   
@@ -28,7 +32,11 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/doctor-login" element={<DoctorLogin />} />
+        <Route path="/patient-login" element={<PatientLogin />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot" element={<ForgotPassword />} />
+        {/* <Route path="/template" element={<LoginTemplate />} /> */}
       </Routes>
       
       <Footer />

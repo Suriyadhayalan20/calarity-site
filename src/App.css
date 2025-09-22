@@ -483,11 +483,11 @@ button:focus-visible {
 }
 
 /* Headings & brand */
-.footer-col h3,
+.footer-col h2,
 .logo {
-  color: #fff;
+  color: #1657c9;
   margin-bottom: 12px;
-  font-size: 1.1rem;
+  font-size: 40px;
 }
 .logo {
   font-weight: 700;

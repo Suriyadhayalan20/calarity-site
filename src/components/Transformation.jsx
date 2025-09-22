@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Transformation.css";
+// import "./styles/Tranformation.css";
+import "./styles/Transformation.css";
 
 export default function Transformation() {
   const [flipped, setFlipped] = useState(false);
