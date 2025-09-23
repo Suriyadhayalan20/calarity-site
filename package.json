@@ -13,6 +13,7 @@
     "@hookform/resolvers": "^5.2.2",
     "bootstrap": "^5.3.8",
     "lottie-react": "^2.4.1",
+    "lottie-web-light": "^1.1.0",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",
