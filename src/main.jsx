@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./App.css";
-import "./pages/styles/auth.css";
+import "./pages/styles/login.css";
 
 // ✅ Import BrowserRouter
 import { BrowserRouter } from "react-router-dom";

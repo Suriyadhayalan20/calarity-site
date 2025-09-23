@@ -93,7 +93,7 @@ h2{margin:0 0 6px 0}
 
 /* remember row */
 .row.between{ 
-  /* display:flex; */
+  display:block !important;
    justify-content:space-between;
     align-items:center;
      margin-top:12px;
