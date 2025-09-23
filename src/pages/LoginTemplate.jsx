@@ -39,7 +39,7 @@ export default function LoginTemplate({ title = "User", accentColor = "#2ecc71" 
           <p className="sub">Sign in by entering the information below</p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="form">
-            <input placeholder="Email" {...register("email")} className={errors.email ? "input error" : "input"} />
+            <input placeholder="Email" {...register("email")} className={errors.email ? "input error" : "text"} />
             {errors.email && <div className="err">{errors.email.message}</div>}
 
             <div className="pwd-field">
@@ -47,7 +47,7 @@ export default function LoginTemplate({ title = "User", accentColor = "#2ecc71" 
                 type={showPwd ? "text" : "password"}
                 placeholder="Password"
                 {...register("password")}
-                className={errors.password ? "input error" : "input"}
+                className={errors.password ? "input error" : "password"}
               />
               <button
                 type="button"

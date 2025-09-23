@@ -48,6 +48,25 @@ h2{margin:0 0 6px 0}
   font-size:15px;
 }
 
+.text{
+   padding:12px 14px;
+  margin-top:12px;
+  border-radius:6px;
+  border:1px solid #e6e9ee;
+  font-size:15px;
+  font-family: 'Poppins';
+  width: 45%;
+}
+
+.password{
+   padding:12px 14px;
+  margin-top:12px;
+  border-radius:6px;
+  border:1px solid #e6e9ee;
+  font-size:15px;
+  font-family: 'Poppins';
+}
+
 .input.error{ border-color:#e74c3c; }
 
 .err{ color:#e74c3c; font-size:13px; margin-top:6px; }
@@ -73,7 +92,12 @@ h2{margin:0 0 6px 0}
 }
 
 /* remember row */
-.row.between{ display:flex; justify-content:space-between; align-items:center; margin-top:12px; }
+.row.between{ 
+  /* display:flex; */
+   justify-content:space-between;
+    align-items:center;
+     margin-top:12px;
+     }
 
 .remember input{ margin-right:8px; }
 
