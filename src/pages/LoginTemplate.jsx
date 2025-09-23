@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "./validation";
 import { Link, useNavigate } from "react-router-dom";
+// import "/images/login-image.png";
 
 export default function LoginTemplate({ title = "User", accentColor = "#2ecc71" }) {
   const navigate = useNavigate();
@@ -86,7 +87,7 @@ export default function LoginTemplate({ title = "User", accentColor = "#2ecc71" 
         <div className="right">
           {/* Replace with your real illustration or image */}
           <div className="illustration">
-            can put <img src="/login-image.png" alt="Login" />
+           <img src="/images/login-image.png" alt="illustration" />
           </div>
         </div>
       </div>
