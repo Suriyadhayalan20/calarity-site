@@ -85,9 +85,7 @@ export default function LoginTemplate({ title = "User", accentColor = "#2ecc71" 
 
         <div className="right">
           {/* Replace with your real illustration or image */}
-          <div className="illustration">
-            {/* can put <img src="/illustration-placeholder.png" alt="illustration" /> */}
-          </div>
+          
         </div>
       </div>
     </div>
